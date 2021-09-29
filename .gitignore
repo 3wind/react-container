@@ -1,0 +1,14 @@
+# Editor
+.idea
+.vscode
+
+# Dependencies
+/node_modules
+
+# Production
+/dist
+output
+
+# config
+package-lock.json
+yarn.lock
