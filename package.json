@@ -4,6 +4,8 @@
   "description": "react开发模板、代码仓库、微前端基座、一个菜单一个功能点 学了啥就写点啥",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,15 @@
   "bugs": {
     "url": "https://github.com/3wind/react-container/issues"
   },
-  "homepage": "https://github.com/3wind/react-container#readme"
+  "homepage": "https://github.com/3wind/react-container#readme",
+  "dependencies": {
+    "lodash": "4.17.21"
+  },
+  "devDependencies": {
+    "css-loader": "6.3.0",
+    "file-loader": "6.2.0",
+    "style-loader": "3.3.0",
+    "webpack": "5.55.1",
+    "webpack-cli": "4.8.0"
+  }
 }
