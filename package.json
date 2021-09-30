@@ -4,8 +4,8 @@
   "description": "react开发模板、代码仓库、微前端基座、一个菜单一个功能点 学了啥就写点啥",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js",
-    "build": "webpack"
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -29,10 +29,19 @@
     "lodash": "4.17.21"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "6.3.0",
     "file-loader": "6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.8",
+    "postcss-loader": "^6.1.1",
+    "sass-loader": "^12.1.0",
     "style-loader": "3.3.0",
-    "webpack": "5.55.1",
-    "webpack-cli": "4.8.0"
+    "url-loader": "^4.1.1",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
   }
 }
