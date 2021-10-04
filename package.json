@@ -4,8 +4,9 @@
   "description": "react开发模板、代码仓库、微前端基座、一个菜单一个功能点 学了啥就写点啥",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack --config webpack.config.js"
+    "start": "webpack serve --mode=development --config ./config/webpack.dev.js",
+    "build": "webpack --mode=production --config ./config/webpack.prod.js",
+    "ts:init": "tsc --init"
   },
   "repository": {
     "type": "git",
@@ -26,22 +27,67 @@
   },
   "homepage": "https://github.com/3wind/react-container#readme",
   "dependencies": {
-    "lodash": "4.17.21"
+    "@types/react-router-dom": "^5.3.0",
+    "antd": "^4.16.13",
+    "babel-polyfill": "^6.26.0",
+    "lodash": "4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/lodash": "^4.14.175",
+    "@types/react": "^17.0.26",
+    "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.3.6",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "6.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "express": "^4.17.1",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "less-loader": "^10.0.1",
     "mini-css-extract-plugin": "^2.3.0",
     "node-sass": "^6.0.1",
     "postcss": "^8.3.8",
     "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "react-router": "^5.2.1",
     "sass-loader": "^12.1.0",
     "style-loader": "3.3.0",
+    "stylelint-config-standard": "^22.0.0",
+    "ts-import-plugin": "^1.6.7",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
     "url-loader": "^4.1.1",
     "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.3.0"
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base"
   }
 }
