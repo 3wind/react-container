@@ -1,0 +1,23 @@
+.basicLayout {
+  min-height: 100vh !important;
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    padding: 0 16px 16px;
+    min-height: 720px;
+  }
+  // .content::-webkit-scrollbar {
+  //   display: none; /* Chrome Safari */
+  //   padding: 0 16px 16px;
+  // }
+  .default {
+    margin-left: 200px;
+  }
+  .collapsed {
+    margin-left: 80px;
+  }
+}
