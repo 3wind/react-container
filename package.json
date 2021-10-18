@@ -28,9 +28,8 @@
   "homepage": "https://github.com/3wind/react-container#readme",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@types/react-router-dom": "^5.3.0",
+    "@micro-zoe/micro-app": "^0.4.0",
     "antd": "^4.16.13",
-    "babel-polyfill": "^6.26.0",
     "lodash": "4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -47,6 +46,7 @@
     "@types/react": "^17.0.26",
     "@types/react-dom": "^17.0.9",
     "@types/react-loadable": "^5.5.6",
+    "@types/react-router-dom": "^5.3.0",
     "autoprefixer": "^10.3.6",
     "babel-loader": "^8.2.2",
     "babel-plugin-import": "^1.13.3",

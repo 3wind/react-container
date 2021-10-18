@@ -1,6 +1,6 @@
 import Exception from '@/pages/Exception';
 import asyncLoad from './asyncLoad';
-import { HomeOutlined, MenuOutlined, TableOutlined } from '@ant-design/icons';
+import { HomeOutlined, MenuOutlined, SubnodeOutlined, TableOutlined } from '@ant-design/icons';
 import React from 'react';
 
 export interface RouteProps {
@@ -57,6 +57,13 @@ const routes = [
         path: '/menu/menu2',
       },
     ],
+  },
+  {
+    name: '子应用',
+    component: asyncLoad(() => import('@/pages/subApplication')),
+    exact: true,
+    path: '/subApplication',
+    icon: <SubnodeOutlined />,
   },
   {
     name: '异常页',
