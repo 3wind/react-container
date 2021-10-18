@@ -17,7 +17,7 @@ const BasicLayout = ({ children }: BasicLayoutProps) => {
       <SiderBar collapsed={collapsed} setCollapsed={() => setCollapsed(!collapsed)} />
       <Layout className={collapsed ? styles.collapsed : styles.default}>
         <Header />
-        <Content className={styles.basicLayout}>{children}</Content>
+        <Content className={styles.content}>{children}</Content>
       </Layout>
     </Layout>
   );

@@ -1,19 +1,21 @@
 .basicLayout {
   min-height: 100vh !important;
+  min-width: 1000px;
   .content {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 88px); // 56 + 32*2
     overflow-y: auto;
     scrollbar-width: none; /* firefox */
     -ms-overflow-style: none; /* IE 10+ */
-    padding: 0 16px 16px;
-    min-height: 720px;
+    margin: 16px;
+    min-height: 600px;
   }
-  // .content::-webkit-scrollbar {
-  //   display: none; /* Chrome Safari */
-  //   padding: 0 16px 16px;
-  // }
+  .content::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+    padding: 0 16px 16px;
+  }
   .default {
     margin-left: 200px;
   }

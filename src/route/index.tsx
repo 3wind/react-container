@@ -1,6 +1,12 @@
 import Exception from '@/pages/Exception';
 import asyncLoad from './asyncLoad';
-import { HomeOutlined, MenuOutlined, SubnodeOutlined, TableOutlined } from '@ant-design/icons';
+import {
+  HomeOutlined,
+  LineChartOutlined,
+  MenuOutlined,
+  SubnodeOutlined,
+  TableOutlined,
+} from '@ant-design/icons';
 import React from 'react';
 
 export interface RouteProps {
@@ -64,6 +70,13 @@ const routes = [
     exact: true,
     path: '/subApplication',
     icon: <SubnodeOutlined />,
+  },
+  {
+    name: 'Echart',
+    component: asyncLoad(() => import('@/pages/echart')),
+    exact: true,
+    path: '/echart',
+    icon: <LineChartOutlined />,
   },
   {
     name: '异常页',
