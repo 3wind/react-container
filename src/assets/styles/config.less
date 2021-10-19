@@ -1,0 +1,87 @@
+// 主题相关样式变量
+@base-blue: #1A50F4;
+@base-red: #ff4949;
+@base-black: #191919;
+@base-blue-hover: #457aff;
+// gray
+@base-gray: #999;
+@base-green: #13ce66;
+@blue-light-lv1: #d2e7ff;
+@gray-light-lv1: #080808;
+@gray-light-lv2: #DCDFE6;
+@gray-light-lv3: #fafafa;
+@gray-light-lv4: #f5f5f5;
+@gray-light-lv5: #333333;
+@black-lv1: #000000;
+@base-white: #fff;
+
+// 用于标题头的渐变蓝
+@header-blue-linear: linear-gradient( 43deg, rgb(56, 136, 250) 0%, rgb(26, 80, 244) 100%);
+
+@base-font-size: 14px;
+@base-space: 15px;
+
+@background-color: #f0f0f0;
+// 可能主题相关
+@base-color: @base-blue;
+// 边框色
+@border-color: @gray-light-lv2; 
+// hover颜色
+@hover-color: @blue-light-lv1;
+// 失败色/删除色/警告色
+@faild-color: @base-red; 
+@success-color: @base-green;
+// 设置5个字体等级 12, 14, 16, 18, 20
+@font-size-lv1: @base-font-size - 2;
+@font-size-lv2: @base-font-size;
+@font-size-lv3: @base-font-size + 2;
+@font-size-lv4: @base-font-size + 4;
+@font-size-lv5: @base-font-size + 6;
+
+// 自由设置字体大小
+.font-size(@size: 0) {
+  font-size: @base-font-size + @size
+}
+
+// 阴影
+.box-shadow(@shadow: 0px 4px 16px 0px rgba(22, 47, 122, 0.18)) {
+  box-shadow: @shadow;
+}
+
+// .border-style () {
+//   border: 1px solid @border-color;
+// }
+
+// TODO: arguments 取多方向
+.border-style (@direction; @color: @border-color) {
+  border-@{direction}: 1px solid @color;
+}
+
+
+// 溢出省略
+.font-over-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 全居中
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 竖直方向上下布局
+.flex-column() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// 上下居中, 左右两端对齐布局
+.flex-space-between() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

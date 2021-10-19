@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
-import logo from '@/asset/doc.svg';
+import logo from '@/assets/doc.svg';
 import routes from '@/route/index';
 import styles from './index.scss';
 import { menuItems } from './items';
