@@ -79,6 +79,13 @@ const routes = [
     icon: <LineChartOutlined />,
   },
   {
+    name: 'Ant-G6',
+    component: asyncLoad(() => import('@/pages/g6')),
+    exact: true,
+    path: '/g6',
+    icon: <LineChartOutlined />,
+  },
+  {
     name: '异常页',
     component: Exception,
     hidden: true,

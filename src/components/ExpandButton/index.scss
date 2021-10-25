@@ -1,0 +1,23 @@
+.expandBtn {
+  :global {
+    .ant-btn {
+      line-height: 1;
+      padding: 0;
+    }
+    .ant-btn > .anticon {
+      color: #666;
+      margin-left: 10px;
+      float: right;
+    }
+    .ant-btn > .anticon + span,
+    .ant-btn > span + .anticon {
+      margin-left: 0;
+    }
+    .ant-btn-link:hover,
+    .ant-btn-link:focus,
+    .ant-btn-link.active {
+      color: #175dff;
+      opacity: 0.8;
+    }
+  }
+}

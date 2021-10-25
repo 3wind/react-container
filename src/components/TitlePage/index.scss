@@ -1,0 +1,16 @@
+.content {
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #262626;
+  font-weight: 500;
+  position: relative;
+  padding-left: 12px;
+  &::after{
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: #F65646;
+    position: absolute;
+    left: 0;
+  }
+}

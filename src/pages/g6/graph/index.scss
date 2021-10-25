@@ -1,0 +1,21 @@
+.g6Graph {
+  background-color: #f9fafb;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 32px;
+  width: 1000px;
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 0 0 4px 0;
+    background-color: #e5eaee;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+  }
+}

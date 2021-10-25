@@ -2,7 +2,7 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-module.exports = merge(common, {
+module.exports = merge(common({ extractCSS: false }), {
   mode: 'development',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
