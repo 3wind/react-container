@@ -56,19 +56,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* 自定义滚动条样式 */
-
-/* ::-webkit-scrollbar-track-piece {
-  border-radius: 8px;
-}
-::-webkit-scrollbar-thumb:vertical {
-  height: 12px;
-  border-radius: 2px;
-  background-color: #c6c9cf;
-}
-::-webkit-scrollbar-thumb:horizontal {
-  width: 6px;
-  border-radius: 8px;
-  background-color: #c6c9cf;
-} */

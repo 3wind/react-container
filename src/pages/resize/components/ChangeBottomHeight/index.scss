@@ -1,0 +1,10 @@
+.resize {
+  width: 30px;
+  cursor: s-resize;
+  background: #bcd1ff;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 15px);
+  border-radius: 100px;
+}

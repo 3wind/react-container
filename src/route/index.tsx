@@ -1,13 +1,14 @@
 import Exception from '@/pages/Exception';
 import asyncLoad from './asyncLoad';
 import {
+  ArrowsAltOutlined,
   HomeOutlined,
   LineChartOutlined,
   MenuOutlined,
   SubnodeOutlined,
-  TableOutlined,
 } from '@ant-design/icons';
 import React from 'react';
+import { antComponent } from './ant';
 
 export interface RouteProps {
   name: string;
@@ -28,13 +29,7 @@ const routes = [
     path: '/',
     icon: <HomeOutlined />,
   },
-  {
-    name: '表格',
-    component: asyncLoad(() => import('@/pages/table')),
-    exact: true,
-    path: '/table',
-    icon: <TableOutlined />,
-  },
+  ...antComponent,
   {
     name: '菜单',
     path: '/menu',
@@ -84,6 +79,13 @@ const routes = [
     exact: true,
     path: '/g6',
     icon: <LineChartOutlined />,
+  },
+  {
+    name: '提示框（宽高可变）',
+    component: asyncLoad(() => import('@/pages/resize')),
+    exact: true,
+    path: '/resize',
+    icon: <ArrowsAltOutlined />,
   },
   {
     name: '异常页',
