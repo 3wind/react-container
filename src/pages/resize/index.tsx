@@ -41,7 +41,7 @@ const MyPopover: React.FC = () => {
   };
 
   return (
-    <div>
+    <div style={{ display: 'inline-block' }}>
       <div style={{ textAlign: 'center' }}>
         <a id="r-strategy-btn" onClick={clickBtn}>
           点击按钮
