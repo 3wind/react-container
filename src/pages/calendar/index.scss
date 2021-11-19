@@ -1,0 +1,25 @@
+.demoApp {
+  display: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  .main {
+    // flex-grow: 1;
+    padding: 16px;
+    :global {
+      .fc-toolbar-chunk > div {
+        display: flex;
+        h2 {
+          width: 136px;
+          text-align: center;
+        }
+      }
+      .fc-button-primary:focus,
+      .fc-button-primary:active {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}

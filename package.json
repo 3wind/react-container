@@ -29,6 +29,9 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@antv/g6": "^4.3.11",
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
+    "@fullcalendar/react": "^5.10.1",
     "@micro-zoe/micro-app": "^0.4.0",
     "antd": "^4.16.13",
     "echarts": "^5.2.1",

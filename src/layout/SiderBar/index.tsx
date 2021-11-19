@@ -1,18 +1,46 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Layout, Menu } from 'antd';
 import logo from '@/assets/doc.svg';
 import routes from '@/route/index';
-import styles from './index.scss';
 import { menuItems } from './items';
+import styles from './index.scss';
+import { withRouter } from 'react-router';
+import { getOpenKeys } from './utils';
+import { uniq } from 'lodash';
 
 const { Sider } = Layout;
 
 interface SiderBarProps {
   collapsed: boolean;
   setCollapsed: Function;
+  history: any;
+  location: any;
+  match: any;
 }
 
-const SiderBar = ({ collapsed, setCollapsed }: SiderBarProps) => {
+const SiderBar: React.FC<SiderBarProps> = ({
+  collapsed,
+  setCollapsed,
+  location,
+}) => {
+  const [openKeys, setOpenKeys] = useState([]);
+  const [selectedKeys, setSelectedKeys] = useState([]);
+
+  useEffect(() => {
+    const currentOpenKeys: string[] = [];
+    // 获取当前路径的父级path数组
+    getOpenKeys(location.pathname, routes, currentOpenKeys);
+    setOpenKeys(uniq(openKeys.concat(currentOpenKeys)));
+    setSelectedKeys([location.pathname]);
+  }, [location]);
+
+  const onOpenChange = useCallback(
+    (keys) => {
+      setOpenKeys(keys);
+    },
+    [setOpenKeys],
+  );
+
   return (
     <Sider
       collapsible
@@ -31,17 +59,14 @@ const SiderBar = ({ collapsed, setCollapsed }: SiderBarProps) => {
         <img src={logo} className={styles.logo} alt="" />
         {!collapsed ? <span className={styles.titleName}>React Container</span> : null}
       </div>
-      {/* <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-      </Menu> */}
 
       <Menu
         className={styles.menu}
         mode="inline"
         theme="dark"
-        // openKeys={openKeys}
-        // selectedKeys={selectedKeys}
-        // onOpenChange={onOpenChange}
+        openKeys={openKeys}
+        selectedKeys={selectedKeys}
+        onOpenChange={onOpenChange}
       >
         {menuItems(routes)}
       </Menu>
@@ -49,4 +74,4 @@ const SiderBar = ({ collapsed, setCollapsed }: SiderBarProps) => {
   );
 };
 
-export default SiderBar;
+export default withRouter(SiderBar);

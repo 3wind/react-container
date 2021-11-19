@@ -28,7 +28,7 @@ export const menuItems: any = (routes: RouteProps[]) => {
       // 有子节点则渲染 SubMenu
       if (childrenNodes.length) {
         return menus.concat(
-          <SubMenu key={name} title={renderTitle(name, icon)}>
+          <SubMenu key={path} title={renderTitle(name, icon)}>
             {childrenNodes}
           </SubMenu>,
         );

@@ -60,7 +60,6 @@ const TreeSelectDemo = () => {
     onChange: onChange,
     treeCheckable: true,
     showCheckedStrategy: SHOW_PARENT,
-    searchPlaceholder: 'Please select',
     autoClearSearchValue: false,
     style: {
       width: '100%',

@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = ({ extractCSS = false }) => {
@@ -42,7 +41,23 @@ module.exports = ({ extractCSS = false }) => {
           ],
         },
         {
-          test: /\.(sa|sc|c)ss$/,
+          // 使用该配置，否则fullCalendar样式无法加载
+          test: /\.css$/,
+          use: [
+            extractCSS
+              ? {
+                  loader: MiniCssExtractPlugin.loader,
+                }
+              : {
+                  loader: 'style-loader',
+                },
+            {
+              loader: 'css-loader',
+            },
+          ],
+        },
+        {
+          test: /\.(sa|sc)ss$/,
           use: [
             extractCSS
               ? {
@@ -54,7 +69,10 @@ module.exports = ({ extractCSS = false }) => {
             {
               loader: 'css-loader',
               options: {
-                modules: true,
+                modules: {
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                },
+                importLoaders: 1,
               },
             },
             {
@@ -65,16 +83,13 @@ module.exports = ({ extractCSS = false }) => {
         {
           test: /\.less$/,
           use: [
-            // extractCSS
-            //   ? {
-            //       loader: MiniCssExtractPlugin.loader,
-            //     }
-            //   : {
-            //       loader: 'style-loader',
-            //     },
-            {
-              loader: 'style-loader',
-            },
+            extractCSS
+              ? {
+                  loader: MiniCssExtractPlugin.loader,
+                }
+              : {
+                  loader: 'style-loader',
+                },
             {
               loader: 'css-loader',
             },
@@ -89,7 +104,7 @@ module.exports = ({ extractCSS = false }) => {
           ],
         },
         {
-          test: /\.(png|svg|jpg|gif)$/,
+          test: /\.(png|gif|jpe?g|bmp)$/,
           use: [
             {
               loader: 'url-loader',
@@ -101,7 +116,7 @@ module.exports = ({ extractCSS = false }) => {
           ],
         },
         {
-          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          test: /\.(svg|woff|woff2|eot|ttf|otf)$/,
           use: [
             {
               loader: 'file-loader',
@@ -114,11 +129,6 @@ module.exports = ({ extractCSS = false }) => {
       ],
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        title: 'react container',
-        template: path.resolve(__dirname, '../public/index.html'),
-        filename: 'index.html',
-      }),
       // 显示百分比编译
       new webpack.ProgressPlugin({
         activeModules: false,
@@ -134,6 +144,7 @@ module.exports = ({ extractCSS = false }) => {
         new MiniCssExtractPlugin({
           filename: 'static/css/[name].[hash:8].css',
           chunkFilename: 'static/css/[id].[hash:8].css',
+          ignoreOrder: true
         }),
     ].filter(Boolean),
     optimization: {

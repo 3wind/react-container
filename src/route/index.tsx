@@ -1,14 +1,9 @@
 import Exception from '@/pages/Exception';
 import asyncLoad from './asyncLoad';
-import {
-  ArrowsAltOutlined,
-  HomeOutlined,
-  LineChartOutlined,
-  MenuOutlined,
-  SubnodeOutlined,
-} from '@ant-design/icons';
+import { HomeOutlined, LineChartOutlined, MenuOutlined, SubnodeOutlined } from '@ant-design/icons';
 import React from 'react';
 import { antComponent } from './ant';
+import { myComponent } from './compontent';
 
 export interface RouteProps {
   name: string;
@@ -30,6 +25,28 @@ const routes = [
     icon: <HomeOutlined />,
   },
   ...antComponent,
+  ...myComponent,
+  {
+    name: 'Echart',
+    component: asyncLoad(() => import('@/pages/echart')),
+    exact: true,
+    path: '/echart',
+    icon: <LineChartOutlined />,
+  },
+  {
+    name: 'Ant-G6',
+    component: asyncLoad(() => import('@/pages/g6')),
+    exact: true,
+    path: '/g6',
+    icon: <LineChartOutlined />,
+  },
+  {
+    name: '子应用',
+    component: asyncLoad(() => import('@/pages/subApplication')),
+    exact: true,
+    path: '/subApplication',
+    icon: <SubnodeOutlined />,
+  },
   {
     name: '菜单',
     path: '/menu',
@@ -58,34 +75,6 @@ const routes = [
         path: '/menu/menu2',
       },
     ],
-  },
-  {
-    name: '子应用',
-    component: asyncLoad(() => import('@/pages/subApplication')),
-    exact: true,
-    path: '/subApplication',
-    icon: <SubnodeOutlined />,
-  },
-  {
-    name: 'Echart',
-    component: asyncLoad(() => import('@/pages/echart')),
-    exact: true,
-    path: '/echart',
-    icon: <LineChartOutlined />,
-  },
-  {
-    name: 'Ant-G6',
-    component: asyncLoad(() => import('@/pages/g6')),
-    exact: true,
-    path: '/g6',
-    icon: <LineChartOutlined />,
-  },
-  {
-    name: '提示框（宽高可变）',
-    component: asyncLoad(() => import('@/pages/resize')),
-    exact: true,
-    path: '/resize',
-    icon: <ArrowsAltOutlined />,
   },
   {
     name: '异常页',
