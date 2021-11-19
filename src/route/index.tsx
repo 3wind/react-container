@@ -4,6 +4,7 @@ import { HomeOutlined, LineChartOutlined, MenuOutlined, SubnodeOutlined } from '
 import React from 'react';
 import { antComponent } from './ant';
 import { myComponent } from './compontent';
+import { reduxDemo } from './reduxDemo';
 
 export interface RouteProps {
   name: string;
@@ -26,6 +27,7 @@ const routes = [
   },
   ...antComponent,
   ...myComponent,
+  ...reduxDemo,
   {
     name: 'Echart',
     component: asyncLoad(() => import('@/pages/echart')),
@@ -40,13 +42,7 @@ const routes = [
     path: '/g6',
     icon: <LineChartOutlined />,
   },
-  {
-    name: '子应用',
-    component: asyncLoad(() => import('@/pages/subApplication')),
-    exact: true,
-    path: '/subApplication',
-    icon: <SubnodeOutlined />,
-  },
+
   {
     name: '菜单',
     path: '/menu',
@@ -75,6 +71,13 @@ const routes = [
         path: '/menu/menu2',
       },
     ],
+  },
+  {
+    name: '子应用',
+    component: asyncLoad(() => import('@/pages/subApplication')),
+    exact: true,
+    path: '/subApplication',
+    icon: <SubnodeOutlined />,
   },
   {
     name: '异常页',

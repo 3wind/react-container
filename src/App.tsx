@@ -8,9 +8,7 @@ function App() {
   return (
     <Router>
       <BasicLayout>
-        <Switch>
-          {generateRoutes(routes)}
-        </Switch>
+        <Switch>{generateRoutes(routes)}</Switch>
       </BasicLayout>
     </Router>
   );

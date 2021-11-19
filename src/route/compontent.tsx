@@ -1,4 +1,4 @@
-import { SnippetsOutlined } from '@ant-design/icons';
+import { MenuOutlined } from '@ant-design/icons';
 import React from 'react';
 import asyncLoad from './asyncLoad';
 
@@ -6,7 +6,7 @@ export const myComponent = [
   {
     name: '功能组件',
     path: '/components',
-    icon: <SnippetsOutlined />,
+    icon: <MenuOutlined />,
     children: [
       {
         name: '提示框（宽高可变）',
