@@ -9,11 +9,25 @@ export const reduxDemo = [
     icon: <MenuOutlined />,
     children: [
       {
-        name: '最简单的Redux',
+        name: '原生Redux',
         component: asyncLoad(() => import('@/pages/reduxDemo/redux/app')),
         exact: true,
         hideInMenu: true,
         path: '/pages/reduxDemo/redux/app',
+      },
+      {
+        name: 'react-redux',
+        component: asyncLoad(() => import('@/pages/reduxDemo/reactRedux/index')),
+        exact: true,
+        hideInMenu: true,
+        path: '/pages/reduxDemo/reactRedux/demo',
+      },
+      {
+        name: 'react-saga',
+        component: asyncLoad(() => import('@/pages/reduxDemo/reactSaga/index')),
+        exact: true,
+        hideInMenu: true,
+        path: '/pages/reduxDemo/reactSaga/demo',
       },
     ],
   },
