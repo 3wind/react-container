@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './store';
 import { getReduxTestDataAPI } from '@/services/reduxTest';
 import { useRequest } from 'ahooks';
+import { batch } from 'react-redux';
 
 const App = () => {
   const state = useSelector((state: RootState) => state);
@@ -14,13 +15,15 @@ const App = () => {
   console.log('页面重新渲染', demo);
 
   const updateRedux = () => {
-    dispatch({
-      type: 'CHANGE_LOADING_STATUS',
-      payload: { loading: !demo.loading },
-    });
-    dispatch({
-      type: 'CHANGE_NAME',
-      payload: { name: demo.name === 'wangWu' ? 'liSi' : 'wangWu' },
+    batch(() => {
+      dispatch({
+        type: 'CHANGE_LOADING_STATUS',
+        payload: { loading: !demo.loading },
+      });
+      dispatch({
+        type: 'CHANGE_NAME',
+        payload: { name: demo.name === 'wangWu' ? 'liSi' : 'wangWu' },
+      });
     });
   };
 
