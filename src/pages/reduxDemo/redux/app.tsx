@@ -57,6 +57,16 @@ const App = () => {
         通过 subscribe(listener) 注册监听器;
         <br />
         通过 subscribe(listener) 返回的函数注销监听器。
+        <br />
+        <strong>注意</strong>
+        <br />
+        <span>
+          1、在正常的react的事件流里（如onClick等） setState是异步执行的（不会立即更新state的结果）
+          多次执行setState，只会调用一次重新渲染render
+          <br />
+          2、在setTimeout，Promise.then等异步事件中 setState是同步执行的（立即更新state的结果）
+          多次执行setState，每一次的执行setState，都会调用一次render
+        </span>
       </p>
     </div>
   );
