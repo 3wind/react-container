@@ -12,6 +12,16 @@ module.exports = merge(common({ extractCSS: false }), {
     port: 3000, // 端口
     hot: true, // 开启热更新
     open: false, // 自动打开浏览器
+
+    proxy: {
+      '/mock': {
+        target: 'http://127.0.0.1:9528',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/mock': '/'
+        }
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

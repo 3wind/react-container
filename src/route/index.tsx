@@ -5,6 +5,7 @@ import React from 'react';
 import { antComponent } from './ant';
 import { myComponent } from './compontent';
 import { reduxDemo } from './reduxDemo';
+import { timeUtils } from './times';
 
 export interface RouteProps {
   name: string;
@@ -28,6 +29,7 @@ const routes = [
   ...antComponent,
   ...myComponent,
   ...reduxDemo,
+  ...timeUtils,
   {
     name: 'Echart',
     component: asyncLoad(() => import('@/pages/echart')),
