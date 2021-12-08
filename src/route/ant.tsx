@@ -9,12 +9,19 @@ export const antComponent = [
     icon: <MenuOutlined />,
     children: [
       {
+        name: 'Ant3带全选下拉框',
+        component: asyncLoad(() => import('@/pages/ant/Selector')),
+        exact: true,
+        hideInMenu: true,
+        path: '/ant/Selector',
+      },
+      {
         name: 'TreeSelect',
         component: asyncLoad(() => import('@/pages/ant/TreeSelect')),
         exact: true,
         hideInMenu: true,
         path: '/ant/TreeSelect',
-      }
+      },
     ],
   },
 ];

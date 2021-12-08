@@ -1,0 +1,17 @@
+.selectorDropdownRender {
+  :global {
+    .ant-select-dropdown-menu-item {
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 600;
+      background-color: #e6f7ff;
+    }
+    .ant-select-item {
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 600;
+      background-color: #e6f7ff;
+    }
+    .ant-select-selected-icon {
+      color: #1890ff !important;
+    }
+  }
+}
