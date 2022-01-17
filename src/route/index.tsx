@@ -52,14 +52,12 @@ const routes = [
     children: [
       {
         name: '菜单1',
-        hideInMenu: true,
         path: '/menu/menu1',
         children: [
           {
             name: '菜单11',
             component: asyncLoad(() => import('@/pages/menu/menu1/menu11')),
             exact: true,
-            hideInMenu: true,
             path: '/menu/menu1/menu11',
           },
         ],
@@ -69,7 +67,6 @@ const routes = [
         name: '菜单2',
         component: asyncLoad(() => import('@/pages/menu/menu2')),
         exact: true,
-        hideInMenu: true,
         path: '/menu/menu2',
       },
     ],

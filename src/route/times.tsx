@@ -12,7 +12,6 @@ export const timeUtils = [
         name: 'Moment',
         component: asyncLoad(() => import('@/pages/time/moment')),
         exact: true,
-        hideInMenu: true,
         path: '/time/moment',
       },
     ],
