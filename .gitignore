@@ -1,6 +1,9 @@
 # Editor
 .idea
-.vscode
+#忽略.vscode下文件，但保留用户片段
+!.vscode
+.vscode/*
+!.vscode/*.code-snippets
 
 # Dependencies
 /node_modules
