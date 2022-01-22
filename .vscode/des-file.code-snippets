@@ -1,0 +1,15 @@
+{
+    "des-file": {
+      "prefix": "des-file",
+      "body": [
+        "/**",
+        " * @Author:  ",
+        " * @Date: ",
+        " * @LastEditors: ",
+        " * @LastEditTime: ",
+        " * @Description: ",
+        " */"
+      ],
+      "description": "description file"
+    }
+  }

@@ -1,0 +1,14 @@
+{
+    "des-fuc": {
+      "prefix": "des-fuc",
+      "body": [
+        "/**",
+        " * ",
+        " * @param ",
+        " * @returns ",
+        " */"
+      ],
+      "description": "description function"
+    }
+  }
+  
