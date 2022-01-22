@@ -123,6 +123,11 @@
   "eslintConfig": {
     "extends": "airbnb-base"
   },
+  "config": {
+      "commitizen": {
+          "path": "cz-customizable"
+      }
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
