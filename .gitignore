@@ -5,6 +5,8 @@
 .vscode/*
 !.vscode/*.code-snippets
 
+.history
+
 # Dependencies
 /node_modules
 

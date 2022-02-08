@@ -31,6 +31,13 @@ const routes = [
   ...reduxDemo,
   ...timeUtils,
   {
+    name: 'CircleProgress',
+    component: asyncLoad(() => import('@/pages/progress')),
+    exact: true,
+    path: '/progress',
+    icon: <HomeOutlined />,
+  },
+  {
     name: 'Echart',
     component: asyncLoad(() => import('@/pages/echart')),
     exact: true,

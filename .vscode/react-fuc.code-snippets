@@ -1,0 +1,17 @@
+{
+	"tsx": {
+		"prefix": "tsx",
+		"body": [
+		  "import React from 'react';",
+		  "",
+		  "interface AppProps {}",
+		  "",
+		  "const App = (props: AppProps) => {",
+		  "  return null;",
+		  "};",
+		  "export default App;",
+		  ""
+		],
+		"description": "tsx components"
+	}
+}

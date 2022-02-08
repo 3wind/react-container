@@ -43,6 +43,7 @@
     "echarts": "^5.2.1",
     "echarts-for-react": "^3.0.1",
     "immer": "^9.0.6",
+    "js-circle-progress": "^0.2.2",
     "lodash": "4.17.21",
     "moment": "^2.29.1",
     "qs": "^6.10.1",
@@ -124,9 +125,9 @@
     "extends": "airbnb-base"
   },
   "config": {
-      "commitizen": {
-          "path": "cz-customizable"
-      }
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   },
   "husky": {
     "hooks": {
