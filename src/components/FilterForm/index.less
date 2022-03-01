@@ -1,0 +1,125 @@
+.filter-form {
+  padding: 24px;
+  padding-bottom: 0;
+  min-height: 64px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: auto;
+
+  &::before {
+    display: table;
+    content: '';
+  }
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+  .form-container {
+    min-width: 1043px;
+  }
+
+  .@{ant-prefix}-form-item-label {
+    width: 88px; // 弹性宽度会导致文字过长时上下无法对齐
+    // min-width: 88px;
+    // max-width: 120px;
+    text-align: right;
+  }
+  .@{ant-prefix}-form-item-label > label {
+    font-family: PingFangSC-Regular, PingFang SC;
+    color: #000e33;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 32px;
+  }
+
+  .@{ant-prefix}-form-item {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .@{ant-prefix}-form-item-control {
+    flex: 1;
+  }
+
+  // 覆盖所有输入框的样式
+  .@{ant-prefix}-input {
+    border-radius: 4px !important;
+  }
+  .@{ant-prefix}-select-selector {
+    border-radius: 4px !important;
+  }
+  .@{ant-prefix}-input-number {
+    border-radius: 4px !important;
+  }
+  .@{ant-prefix}-picker {
+    border-radius: 4px !important;
+  }
+
+  &-option {
+    .collapseText {
+      width: 56px;
+      height: 20px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #2863fa;
+      line-height: 20px;
+    }
+    .@{ant-prefix}-form-item-control-input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: right;
+    }
+    // 按钮样式覆盖
+    .@{ant-prefix}-btn {
+      width: 80px;
+      height: 32px;
+      box-shadow: 0px 4px 8px 0px rgba(144, 146, 159, 0.2);
+      border-radius: 4px;
+      border: 1px solid #2863fa;
+    }
+    .@{ant-prefix}-btn-primary {
+      background: #2863fa;
+    }
+    .@{ant-prefix}-btn > span {
+      display: inline-block;
+      width: 28px;
+      height: 16px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #2863fa;
+      line-height: 16px;
+    }
+    .@{ant-prefix}-btn-primary {
+      background: #2863fa;
+    }
+    .@{ant-prefix}-btn-primary > span {
+      color: #ffffff;
+    }
+  }
+
+  // todo 一行5个待处理
+  .@{ant-prefix}-col-5 {
+    display: block;
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
+  .@{ant-prefix}-col-offset-5 {
+    margin-left: 20% !important;
+  }
+  .@{ant-prefix}-col-offset-10 {
+    margin-left: 40% !important;
+  }
+  .@{ant-prefix}-col-offset-15 {
+    margin-left: 60% !important;
+  }
+  .@{ant-prefix}-col-offset-20 {
+    margin-left: 80% !important;
+  }
+}

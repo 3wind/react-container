@@ -1,6 +1,6 @@
 import Exception from '@/pages/Exception';
 import asyncLoad from './asyncLoad';
-import { HomeOutlined, LineChartOutlined, MenuOutlined, SubnodeOutlined } from '@ant-design/icons';
+import { HomeOutlined, LineChartOutlined, Loading3QuartersOutlined, MenuOutlined, SubnodeOutlined } from '@ant-design/icons';
 import React from 'react';
 import { antComponent } from './ant';
 import { myComponent } from './compontent';
@@ -31,11 +31,11 @@ const routes = [
   ...reduxDemo,
   ...timeUtils,
   {
-    name: 'CircleProgress',
-    component: asyncLoad(() => import('@/pages/progress')),
+    name: 'ViewImages',
+    component: asyncLoad(() => import('@/pages/viewImages')),
     exact: true,
-    path: '/progress',
-    icon: <HomeOutlined />,
+    path: '/viewImages',
+    icon: <Loading3QuartersOutlined />,
   },
   {
     name: 'Echart',

@@ -98,6 +98,9 @@ module.exports = ({ extractCSS = false }) => {
               options: {
                 lessOptions: {
                   javascriptEnabled: true,
+                  modifyVars: {
+                    '@ant-prefix': 'ant',
+                  },
                 },
               },
             },

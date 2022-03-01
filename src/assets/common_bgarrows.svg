@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>common_bgarrows</title>
+    <desc>Created with Sketch.</desc>
+    <g id="AOI+工作台1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03-营业点-查看全部任务" transform="translate(-214.000000, -116.000000)">
+            <g id="编组-19" transform="translate(194.000000, 98.000000)">
+                <g id="通用/控件/滚动左" transform="translate(20.000000, 18.000000)">
+                    <g id="编组">
+                        <g id="通用/控件/滚动左">
+                            <path d="M6,0 L12,0 C15.3137085,-6.08718376e-16 18,2.6862915 18,6 L18,12 C18,15.3137085 15.3137085,18 12,18 L6,18 C2.6862915,18 4.05812251e-16,15.3137085 0,12 L0,6 C-4.05812251e-16,2.6862915 2.6862915,6.08718376e-16 6,0 Z" id="矩形" fill="#E4E9F9" opacity="0.5" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+                            <g id="通用icon/箭头左" transform="translate(4.000000, 4.000000)">
+                                <g id="编组">
+                                    <g id="icon/箭头">
+                                        <rect id="矩形" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="10" height="10"></rect>
+                                        <polyline id="路径-2" stroke="#8F9AB7" stroke-linecap="round" stroke-linejoin="round" transform="translate(5.000000, 5.000000) scale(-1, 1) rotate(-90.000000) translate(-5.000000, -5.000000) " points="2 3.5 5 6.5 8 3.5"></polyline>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

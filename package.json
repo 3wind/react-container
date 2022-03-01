@@ -9,7 +9,10 @@
     "ts:init": "tsc --init",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "mock": "nodemon ./mock/start.js"
+    "mock": "nodemon ./mock/start.js",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "prettier": "prettier --check 'src/**/*.{ts,tsx,less,js,jsx}'",
+    "prettier:write": "prettier --write 'src/**/*.{ts,tsx,less,js,jsx}'"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
   },
   "homepage": "https://github.com/3wind/react-container#readme",
   "dependencies": {
+    "@ant-design/create-react-context": "^0.2.5",
     "@ant-design/icons": "^4.7.0",
     "@antv/g6": "^4.3.11",
     "@fullcalendar/daygrid": "^5.10.1",
@@ -43,15 +47,16 @@
     "echarts": "^5.2.1",
     "echarts-for-react": "^3.0.1",
     "immer": "^9.0.6",
-    "js-circle-progress": "^0.2.2",
     "lodash": "4.17.21",
     "moment": "^2.29.1",
     "qs": "^6.10.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-loadable": "^5.5.0",
+    "react-photo-view": "^0.5.7",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
+    "react-viewer": "^3.2.2",
     "redux": "^4.1.2",
     "redux-actions": "^2.6.5",
     "redux-saga": "^1.1.3"
