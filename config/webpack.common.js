@@ -8,7 +8,7 @@ module.exports = ({ extractCSS = false }) => {
       index: path.resolve(__dirname, '../src/index.tsx'),
     },
     output: {
-      filename: '[name].[chunkhash:8].js',
+      filename: '[name].[contenthash:8].js',
       path: path.resolve(__dirname, '../dist'),
       clean: true,
     },
