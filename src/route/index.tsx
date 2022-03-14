@@ -1,4 +1,3 @@
-import Exception from '@/pages/Exception';
 import asyncLoad from './asyncLoad';
 import { HomeOutlined, LineChartOutlined, Loading3QuartersOutlined, MenuOutlined, SubnodeOutlined } from '@ant-design/icons';
 import React from 'react';
@@ -94,7 +93,7 @@ const routes = [
   },
   {
     name: '异常页',
-    component: Exception,
+    component: asyncLoad(() => import('@/pages/Exception')),
     hidden: true,
     path: '*',
   },
