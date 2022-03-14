@@ -93,7 +93,7 @@ const routes = [
   },
   {
     name: '异常页',
-    component: asyncLoad(() => import('@/pages/Exception')),
+    component: asyncLoad(() => import('@/pages/exception')),
     hidden: true,
     path: '*',
   },
