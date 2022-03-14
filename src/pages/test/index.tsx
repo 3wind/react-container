@@ -8,14 +8,9 @@ const Test = () => {
   const [count, setCount] = useState(1);
   const [a, setA] = useState(1);
   const [b, setB] = useState({ b: 1 });
-  // useEffect(() => {
-  //   const id = setInterval(() => {
-  //     console.log('count---', count);
-  //     setCount(count + 1);
-  //   }, 1000);
-  //   return () => clearInterval(id);
-  //   // }, []);
-  // }, [count]);
+  useEffect(() => {
+    console.log('test ci')
+  }, []);
   useEffect(() => {
     console.log('a---', a, b);
   }, [a]);
