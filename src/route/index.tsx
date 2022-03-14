@@ -26,6 +26,13 @@ const routes = [
     path: '/',
     icon: <HomeOutlined />,
   },
+  {
+    name: 'test',
+    component: asyncLoad(() => import('@/pages/test')),
+    exact: true,
+    path: '/Test',
+    icon: <HomeOutlined />,
+  },
   ...antComponent,
   ...myComponent,
   ...reduxDemo,
