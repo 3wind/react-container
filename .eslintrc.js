@@ -10,8 +10,13 @@ module.exports = {
     project: './tsconfig.json',
   },
   plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  settings: {
+    react: {
+      version: '^17.0.2',
+    },
+  },
   extends: [
-    'airbnb-typescript',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
