@@ -37,6 +37,13 @@ const routes = [
   ...reduxDemo,
   ...timeUtils,
   {
+    name: '大屏展示',
+    component: asyncLoad(() => import('@/pages/bigScreen')),
+    exact: true,
+    path: '/bigScreen',
+    icon: <HomeOutlined />,
+  },
+  {
     name: 'ViewImages',
     component: asyncLoad(() => import('@/pages/viewImages')),
     exact: true,

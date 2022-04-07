@@ -7,7 +7,7 @@ const generateRoutesHelper: any = (routes: RouteProps[]) =>
   routes.map(({ path, exact = true, component, children }: RouteProps) => {
     const components = [];
     if (component) {
-      let routeComponent = <Route key={path} path={path} exact={exact} component={component} />;
+      const routeComponent = <Route key={path} path={path} exact={exact} component={component} />;
       components.push(routeComponent);
     }
     if (children) {

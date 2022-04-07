@@ -12,17 +12,14 @@ const { Sider } = Layout;
 
 interface SiderBarProps {
   collapsed: boolean;
+  // eslint-disable-next-line @typescript-eslint/ban-types
   setCollapsed: Function;
   history: any;
   location: any;
   match: any;
 }
 
-const SiderBar: React.FC<SiderBarProps> = ({
-  collapsed,
-  setCollapsed,
-  location,
-}) => {
+const SiderBar: React.FC<SiderBarProps> = ({ collapsed, setCollapsed, location }) => {
   const [openKeys, setOpenKeys] = useState([]);
   const [selectedKeys, setSelectedKeys] = useState([]);
 
@@ -40,6 +37,12 @@ const SiderBar: React.FC<SiderBarProps> = ({
     },
     [setOpenKeys],
   );
+
+  const handleClick = ({ key }: any) => {
+    if (key === '/bigScreen') {
+      window.open(`${window.location.origin}/#${key}`);
+    }
+  };
 
   return (
     <Sider
@@ -66,6 +69,7 @@ const SiderBar: React.FC<SiderBarProps> = ({
         theme="dark"
         openKeys={openKeys}
         selectedKeys={selectedKeys}
+        onClick={handleClick}
         onOpenChange={onOpenChange}
       >
         {menuItems(routes)}

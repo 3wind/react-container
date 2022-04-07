@@ -6,7 +6,7 @@ import { RouteProps } from '@/route';
 
 const renderTitle = (name: string, icon: Node) => (
   <>
-    {!!icon ? icon : null}
+    {icon ? icon : null}
     <span>{name}</span>
   </>
 );
@@ -16,6 +16,14 @@ export const menuItems: any = (routes: RouteProps[]) => {
     .filter((route) => !route.hidden)
     .reduce((menus, { name, path, icon, children, disabled }) => {
       // 无 children 则当前为可点击 Menu
+      if (path === '/bigScreen') {
+        return menus.concat(
+          <MenuItem key={path} disabled={disabled}>
+            <span>{renderTitle(name, icon)}</span>
+          </MenuItem>,
+        );
+      }
+
       if (!children) {
         return menus.concat(
           <MenuItem key={path} disabled={disabled}>
