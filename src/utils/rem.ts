@@ -4,7 +4,7 @@ function rem() {
   const reCalc = function () {
     const clientHeight = docEl.clientHeight;
     // 500为最小有效高度，可根据需要配置
-    const scale = Math.max(clientHeight, 500) / 750;
+    const scale = Math.max(clientHeight, 500) / 700;
     docEl.style.fontSize = 100 * scale + 'px';
   };
   reCalc();

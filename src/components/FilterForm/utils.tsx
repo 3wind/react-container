@@ -53,7 +53,7 @@ export const getDefaultSearch = (search: boolean | SearchConfig | undefined): Se
  * @param length
  * @param span
  */
-export const getOffset = (length: number, span: number = 8) => {
+export const getOffset = (length: number, span = 8) => {
   // 24/5不是整数，特殊处理
   const cols = Math.ceil(24 / span);
   return (cols - 1 - (length % cols)) * span;

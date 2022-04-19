@@ -119,6 +119,7 @@ export interface FilterFormItemProps extends Omit<FormItemProps, 'children'> {
    * 控制隐藏,内置属性，不需要传入
    */
   hidden?: boolean;
+  ref?: any;
 }
 
 export interface FilterFormProps<T> extends Omit<FormItemProps, 'children' | 'onReset'> {

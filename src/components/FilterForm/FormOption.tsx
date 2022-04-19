@@ -30,10 +30,10 @@ const FormOption: React.FC<FormOptionProps> = (props) => {
           {collapseRender && collapseRender(collapse)}
         </a>
       )}
+      <Button onClick={() => onReset()}>{resetText}</Button>
       <Button type="primary" htmlType="submit" onClick={() => submit()}>
         {searchText}
       </Button>
-      <Button onClick={() => onReset()}>{resetText}</Button>
     </Space>
   );
 };

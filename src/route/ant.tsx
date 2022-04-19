@@ -9,6 +9,12 @@ export const antComponent = [
     icon: <MenuOutlined />,
     children: [
       {
+        name: 'DragSortingTable',
+        component: asyncLoad(() => import('@/pages/ant/DragSortingTable')),
+        exact: true,
+        path: '/ant/DragSortingTable',
+      },
+      {
         name: '组合select和tree',
         component: asyncLoad(() => import('@/pages/ant/SelectWithTree')),
         exact: true,

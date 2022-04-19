@@ -2,21 +2,23 @@
 import { Button } from 'antd';
 import React, { useEffect, useState } from 'react';
 
-interface AppProps {}
-
 const Test = () => {
-  const [count, setCount] = useState(1);
   const [a, setA] = useState(1);
   const [b, setB] = useState({ b: 1 });
   useEffect(() => {
-    console.log('test ci')
+    console.log('test ci');
   }, []);
   useEffect(() => {
-    console.log('a---', a, b);
+    console.log('a---', a);
   }, [a]);
   useEffect(() => {
-    console.log('b---', a, b);
+    console.log('b---', b);
   }, [b]);
+
+  const testCors = () => {
+    fetch('http://127.0.0.1:9527/getUserInfo');
+  };
+
   return (
     <div>
       <Button type="primary" onClick={() => setA(a)}>
@@ -31,6 +33,9 @@ const Test = () => {
       </Button>
       <Button type="primary" onClick={() => setB({ b: b.b + 1 })}>
         testB2
+      </Button>
+      <Button type="primary" onClick={testCors}>
+        test cors
       </Button>
     </div>
   );

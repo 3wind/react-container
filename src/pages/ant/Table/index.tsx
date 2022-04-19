@@ -1,9 +1,36 @@
-import { FormInstance } from 'antd';
+import { FormInstance, Table } from 'antd';
 import React, { useRef } from 'react';
 import FilterForm from '@/components/FilterForm';
 import { filterItems } from './constants';
 
-const Table: React.FC = () => {
+const defaultColumns = [
+  {
+    title: 'name',
+    dataIndex: 'name',
+    key: 'name',
+    width: 120,
+  },
+  {
+    title: 'des',
+    dataIndex: 'des',
+    key: 'des',
+    width: 160,
+  },
+];
+
+const data = [
+  {
+    id: 1,
+    name: '张三',
+    des: '法外狂徒',
+  },
+  {
+    id: 2,
+    name: '李四',
+    des: '程序员',
+  },
+];
+const TableTemplate: React.FC = () => {
   const formRef = useRef<FormInstance>();
 
   // form高度变化时重新计算table高度
@@ -34,14 +61,18 @@ const Table: React.FC = () => {
   };
 
   return (
-    <FilterForm
-      formItems={filterItems}
-      onSubmit={onSubmit}
-      onReset={onReset}
-      onValueChange={onValueChange}
-      formRef={formRef}
-      onCollapseChange={onCollapseChange}
-    />
+    <>
+      <FilterForm
+        formItems={filterItems}
+        onSubmit={onSubmit}
+        onReset={onReset}
+        onValueChange={onValueChange}
+        formRef={formRef}
+        onCollapseChange={onCollapseChange}
+      />
+
+      <Table rowKey="id" scroll={{ y: 200 }} columns={defaultColumns} dataSource={data} bordered />
+    </>
   );
 };
-export default Table;
+export default TableTemplate;

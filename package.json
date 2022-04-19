@@ -48,10 +48,13 @@
     "echarts-for-react": "^3.0.1",
     "history": "^5.3.0",
     "immer": "^9.0.6",
+    "immutability-helper": "^3.1.1",
     "lodash": "4.17.21",
     "moment": "^2.29.1",
     "qs": "^6.10.1",
     "react": "^17.0.2",
+    "react-dnd": "^16.0.0",
+    "react-dnd-html5-backend": "^16.0.0",
     "react-dom": "^17.0.2",
     "react-loadable": "^5.5.0",
     "react-photo-view": "^0.5.7",
@@ -119,9 +122,9 @@
   },
   "browserslist": {
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
     "production": [
       ">0.2%",

@@ -1,0 +1,27 @@
+.test-table {
+  /**
+    * ant-table内置RcTable的body中，数据为空时会添加-expanded-row-fixed，
+    * 这个属性在chrome49中计算width为0，会导致显示不正确，当width为0时直接设置为width100%
+    * if (isEmpty ? horizonScroll : fixColumn) {
+    *   contentNode = React.createElement("div", {
+    *   style: {
+    *       width: componentWidth - (fixHeader ? scrollbarSize : 0),
+    *       position: 'sticky',
+    *       left: 0,
+    *       overflow: 'hidden'
+    *     },
+    *     className: "".concat(prefixCls, "-expanded-row-fixed")
+    *   }, contentNode);
+    * }
+    */
+  .ant-table-expanded-row-fixed[style*='width: 0px'] {
+    width: 100% !important;
+  }
+  #components-table-demo-drag-sorting tr.drop-over-downward td {
+    border-bottom: 2px dashed #1890ff;
+  }
+
+  #components-table-demo-drag-sorting tr.drop-over-upward td {
+    border-top: 2px dashed #1890ff;
+  }
+}

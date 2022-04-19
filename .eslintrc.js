@@ -31,5 +31,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/prop-types': 'off',
+    'no-empty': [1, { "allowEmptyCatch": true }],
+    '@typescript-eslint/no-empty-function': 0,
   },
 };
