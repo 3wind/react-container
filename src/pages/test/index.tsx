@@ -16,7 +16,14 @@ const Test = () => {
   }, [b]);
 
   const testCors = () => {
-    fetch('http://192.168.255.10:9527/getUserInfo');
+    // fetch('http://192.168.255.10:9527/getUserInfo');
+    fetch('http://192.168.255.10:9527/getUserInfo', {
+      // method: 'PATCH',
+      headers: {
+        // 'Content-Type': 'application/json',
+        'PRIVATE-OPTIONS': 'secret',
+      },
+    });
   };
 
   return (
