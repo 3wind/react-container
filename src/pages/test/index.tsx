@@ -21,7 +21,7 @@ const Test = () => {
       // method: 'PATCH',
       headers: {
         // 'Content-Type': 'application/json',
-        'PRIVATE-OPTIONS': 'secret',
+        'Access-Control-Request-Private-Network': 'true',
       },
     });
   };
