@@ -16,7 +16,7 @@ const Test = () => {
   }, [b]);
 
   const testCors = () => {
-    fetch('http://127.0.0.1:9527/getUserInfo');
+    fetch('http://192.168.255.10:9527/getUserInfo');
   };
 
   return (
