@@ -16,12 +16,14 @@ const Test = () => {
   }, [b]);
 
   const testCors = () => {
-    fetch('http://192.168.255.10:9527/getUserInfo', {
-      // headers: {
-      //   // 设置特殊header，触发预检请求
-      //   'Access-Control-Request-Private-Network': 'true',
-      // },
-    });
+    
+    fetch('http://192.168.255.10:9527/getUserInfo');
+    // fetch('http://192.168.255.10:9527/getUserInfo', {
+    //   // headers: {
+    //   //   // 设置特殊header，触发预检请求
+    //   //   'Access-Control-Request-Private-Network': 'true',
+    //   // },
+    // });
   };
 
   return (
