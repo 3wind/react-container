@@ -9,7 +9,7 @@ module.exports = merge(common({ extractCSS: false }), {
   devServer: {
     static: path.resolve(__dirname, '../dist'),
     host: '0.0.0.0', // 默认是localhost
-    port: 3000, // 端口
+    port: 9526, // 端口
     hot: true, // 开启热更新
     open: false, // 自动打开浏览器
 
